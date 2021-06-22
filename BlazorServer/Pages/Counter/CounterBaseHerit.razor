@@ -1,0 +1,26 @@
+﻿@page "/counterbaseherit"
+@page "/counterbaseherit/{valuecount:int}"
+@inherits CounterBase
+@using BlazorServer.Pages.Dynamic;
+   
+
+
+<h1>Counter Base Heritage</h1>
+
+
+@if (Loading)
+{
+    <p>Loading...</p>
+
+}
+else
+{
+
+    <LinkDyna></LinkDyna>
+    
+
+    <p>Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+}
